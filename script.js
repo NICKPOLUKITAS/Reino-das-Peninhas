@@ -1,9 +1,4 @@
-// Função para o botão de curiosidade
-function showMoreInfo() {
-    alert("As calopsitas são aves originárias da Austrália e são conhecidas por serem dóceis, inteligentes e ótimas companheiras para humanos!");
-}
-
-// Animação de fade-in ao rolar
+// Animação de aparecer ao rolar a página
 const sections = document.querySelectorAll('section');
 
 const observer = new IntersectionObserver((entries) => {
