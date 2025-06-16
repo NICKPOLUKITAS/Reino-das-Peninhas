@@ -1,89 +1,168 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fonte geral */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f9fdfc;
-    margin: 0;
-    padding: 0;
-    color: #333;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f9fdfa;
+  color: #333;
+  line-height: 1.6;
 }
 
+/* Container centralizado e responsivo */
+.container {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
 header {
-    background: linear-gradient(135deg, #6dd5ed, #2193b0);
-    color: white;
-    text-align: center;
-    padding: 60px 20px;
-    position: relative;
+  background-color: #64c7be;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
-.hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
 }
 
-.hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-}
-
-.hero-button {
-    display: inline-block;
-    padding: 12px 25px;
-    background-color: #ffffff;
-    color: #2193b0;
-    border-radius: 25px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background-color 0.3s, color 0.3s;
-}
-
-.hero-button:hover {
-    background-color: #2193b0;
-    color: white;
-}
-
-nav {
-    background-color: #e0f7fa;
-    padding: 10px 0;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
 }
 
 nav a {
-    margin: 0 20px;
-    text-decoration: none;
-    color: #00796b;
-    font-weight: bold;
-    font-size: 1.1em;
+  text-decoration: none;
+  color: #e7f0ee;
+  margin-left: 25px;
+  font-weight: 600;
+  transition: color 0.3s ease;
 }
 
-section {
-    padding: 40px 20px;
-    max-width: 800px;
-    margin: auto;
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+nav a:hover {
+  color: #333;
 }
 
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
+/* Hero Section */
+.hero {
+  background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+  padding: 100px 0 80px;
+  text-align: center;
+  border-radius: 8px;
+  margin: 30px auto;
+  max-width: 900px;
+  box-shadow: 0 8px 20px rgba(252,182,159,0.4);
 }
 
-h2 {
-    color: #00796b;
-    border-bottom: 2px solid #b2dfdb;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 15px;
+  color: #a04e4e;
+  font-weight: 700;
 }
 
-ul li {
-    margin-bottom: 10px;
+.hero p {
+  font-size: 1.3rem;
+  margin-bottom: 30px;
+  color: #7a4b4b;
 }
 
-p {
-    line-height: 1.6;
+/* Botão Hero */
+.hero button {
+  background-color: #a04e4e;
+  border: none;
+  padding: 14px 40px;
+  border-radius: 50px;
+  color: white;
+  font-weight: 700;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 4px 12px rgba(160,78,78,0.6);
 }
 
+.hero button:hover {
+  background-color: #7a3a3a;
+  box-shadow: 0 6px 20px rgba(122,58,58,0.8);
+}
+
+/* Main content cards */
+.main-content {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 30px;
+  margin-bottom: 60px;
+}
+
+.card {
+  background-color: #fff;
+  padding: 30px 40px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card h2 {
+  color: #64c7be;
+  font-weight: 700;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #64c7be;
+  padding-bottom: 8px;
+}
+
+.card ul {
+  list-style-type: disc;
+  padding-left: 20px;
+  color: #555;
+}
+
+.card ul li {
+  margin-bottom: 10px;
+}
+
+.card p a {
+  color: #64c7be;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.card p a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  background-color: #64c7be;
+  color: #e7f0ee;
+  text-align: center;
+  padding: 20px 0;
+  font-weight: 500;
+}
+
+/* Responsividade */
+@media screen and (min-width: 700px) {
+  .main-content {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  .main-content {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
