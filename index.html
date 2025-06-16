@@ -1,56 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo das Calopsitas</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mundo das Calopsitas</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <header>
-        <div class="hero-content">
-            <h1>Mundo das Calopsitas</h1>
-            <p>Descubra como cuidar, alimentar e amar sua calopsita!</p>
-            <a href="#cuidados" class="hero-button">Comece Agora</a>
-        </div>
-    </header>
-
-    <nav>
+  <header>
+    <div class="container header-container">
+      <div class="logo">🌿 Mundo das Calopsitas</div>
+      <nav>
         <a href="#inicio">Início</a>
         <a href="#cuidados">Cuidados</a>
         <a href="#alimentacao">Alimentação</a>
         <a href="#galeria">Galeria</a>
-    </nav>
+      </nav>
+    </div>
+  </header>
 
-    <section id="inicio">
-        <h2>Bem-vindo!</h2>
-        <p>Conheça tudo sobre o universo das calopsitas: alimentação, cuidados e curiosidades.</p>
+  <section class="hero">
+    <div class="container">
+      <h1>Seu guia completo para cuidar da sua calopsita com amor!</h1>
+      <p>Informações, dicas e cuidados para seu melhor amigo de penas.</p>
+      <button onclick="showMoreInfo()">Curiosidade do Dia</button>
+    </div>
+  </section>
+
+  <main class="container main-content">
+
+    <section id="inicio" class="card">
+      <h2>Bem-vindo!</h2>
+      <p>Descubra tudo sobre cuidados, alimentação, ambiente e saúde das calopsitas.</p>
     </section>
 
-    <section id="cuidados">
-        <h2>Cuidados Básicos</h2>
-        <ul>
-            <li>Gaiola espaçosa e confortável</li>
-            <li>Voo livre diário</li>
-            <li>Limpeza e higiene</li>
-            <li>Tempo de interação</li>
-        </ul>
+    <section id="cuidados" class="card">
+      <h2>Cuidados Básicos</h2>
+      <ul>
+        <li>Escolha da gaiola ideal e espaçosa</li>
+        <li>Tempo diário de voo livre</li>
+        <li>Limpeza e higiene constante</li>
+        <li>Cuidados especiais durante a troca de penas</li>
+      </ul>
     </section>
 
-    <section id="alimentacao">
-        <h2>Alimentação Saudável</h2>
-        <ul>
-            <li>Ração balanceada</li>
-            <li>Frutas e verduras seguras</li>
-            <li>Evitar alimentos tóxicos</li>
-        </ul>
+    <section id="alimentacao" class="card">
+      <h2>Alimentação</h2>
+      <ul>
+        <li>Ração extrusada apropriada</li>
+        <li>Frutas seguras: maçã, mamão, melancia</li>
+        <li>Verduras: couve, almeirão, espinafre</li>
+        <li>Evite: chocolate, abacate, cafeína, sal e açúcar</li>
+      </ul>
     </section>
 
-    <section id="galeria">
-        <h2>Galeria de Fofuras</h2>
-        <p>Envie uma foto da sua calopsita para contato@mundodascalopsitas.com</p>
+    <section id="galeria" class="card">
+      <h2>Galeria de Fotos</h2>
+      <p>Envie a foto da sua calopsita para <a href="mailto:contato@mundodascalopsitas.com">contato@mundodascalopsitas.com</a> e faça parte da nossa comunidade!</p>
     </section>
 
-    <script src="script.js"></script>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>© 2025 Mundo das Calopsitas. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    function showMoreInfo() {
+      alert("As calopsitas são aves originárias da Austrália e são conhecidas por serem dóceis, inteligentes e ótimas companheiras!");
+    }
+  </script>
 </body>
 </html>
